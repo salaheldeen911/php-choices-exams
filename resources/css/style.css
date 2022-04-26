@@ -1,0 +1,281 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  background-color: #f2f2f2;
+  font-family: 'Oswald', sans-serif;
+  font-family: Poppins-Regular, sans-serif;
+  letter-spacing: 1px;  
+  height: 100%;
+}
+
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f4f7f9;
+  z-index: 999999;
+  -webkit-transition: opacity 1s ease;
+  transition: opacity 1s ease;
+  opacity: .7;
+  pointer-events: none;
+}
+
+#preloader:after {
+  content: '';
+  width: 50px;
+  height: 50px;
+  z-index: 999999;
+  position: fixed;
+  left: calc(50% - 25px);
+  top: calc(50% - 25px);
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-right-color: #000;
+  -webkit-animation: fa-spin 1.2s infinite;
+  animation: fa-spin 1.2s infinite;
+  z-index: 100000;
+}
+
+
+/* .main-flex-container{
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+} */
+
+
+
+/* header{
+  flex: 0 1 auto;
+} */
+
+/* .sub-flex-container{
+  display: flex;
+  flex: 1 0 auto;
+} */
+
+/* footer{
+
+  flex: 0 1 40px;
+  background-color: #873535 !important
+}
+
+nav{
+  background-color: #873535 !important;
+  justify-content: space-between !important;
+} */
+
+/* nav > a{
+  padding: 0 !important;
+}
+
+nav .main-links-container{
+  flex-grow: 0;
+  font-weight: 900;
+  color: rgb(230 190 197)
+} */
+
+/* nav .main-links-container a{
+  color: rgb(230 190 197)
+}
+
+.flex-container {
+  display: flex;
+  align-items:stretch;
+} */
+
+/* .admin-aside {
+  background: #873535 !important;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  flex: 2 0 15%;
+} */
+
+/* .admin-aside a {
+  font-size: 1.8vw;
+  color: #cbc7ed;
+  margin: 10px 0 10px 0;
+  text-align: center;
+} */
+
+/* main{
+  overflow: auto;
+} */
+
+/* .welcome {
+  margin: 5px;
+  font-family: 'Amiri', serif;
+}
+
+.welcome strong {
+  text-transform: capitalize;
+} */
+
+/* h1 {
+  font-family: 'Amiri', serif;
+  text-transform: uppercase;
+  margin: auto;
+  text-align: center;
+} */
+
+.none {
+  display: none;
+}
+
+.plr-5{
+  padding: 0 5px;
+}
+
+.correct {
+  border: 1px solid green !important;
+}
+
+.wrong {
+  border: 1px solid red !important;
+}
+
+.container-f-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-f-space-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* .flex-stretch {
+  display: flex;
+  align-items: stretch;
+} */
+
+/* .min-h-70 {
+  min-height: 70px;
+}
+
+*/
+
+input[type="checkbox"]:checked {
+  outline: none;
+  box-shadow: 0 0 1px 2px rgba(0, 240, 255, 0.4);
+}
+
+table th{
+  text-align: center;
+}
+
+.td-container{
+  display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+span.actions{
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+table.dataTable tbody tr{
+  background-color: inherit !important;
+}
+
+/* #logo {
+  font-family: 'Hurricane', cursive;
+  font-size: 30px;
+  color: thistle;
+} */
+
+@media (max-width: 555px){
+  .navbar {
+      width: 100%;
+  }
+}
+
+.table-responsive>#exams_wrapper>.row{
+  width: 100%;
+}
+
+.question, .choise{
+  display:flex;
+  height: 75px;
+}
+
+.question-textarea, .choise-textarea{
+  font-size: 17px;
+  font-family: 'Inter';
+  line-height: 20px;
+}
+
+.choise-textarea{
+  color: #b2dece !important;
+}
+
+.question-textarea{
+  color: #6963a4 !important;
+  font-weight: 600;
+}
+
+.choise-checkbox{
+  position: absolute;
+    bottom: 24px;
+    right: -2px;
+}
+
+.preview-list a{
+  text-decoration:inherit !important;
+  color: inherit !important;
+
+}
+
+.preview-list a:hover{
+  text-decoration:none;
+}
+
+.show-active{
+  color: #6a7dfe;
+}
+
+.btn-show{
+  top: 30px;
+  right: 10px;
+}
+
+.min-h-400{
+  min-height: 400px;
+}
+
+.table-responsive .row{
+  width: 100%;
+}
+
+.error, .success {
+  font-family: initial;
+}
+
+.form-group {
+  min-height: 90px;
+  margin-bottom: 0;
+}
+
+.admin {
+  display: flex;
+    flex-direction: column;
+    min-height: 65px;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 15px;
+    letter-spacing: 0px;
+}

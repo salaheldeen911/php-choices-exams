@@ -1,0 +1,255 @@
+@charset "UTF-8";
+
+/* SpryValidationTextField.css - version 0.4 - Spry Pre-Release 1.6.1 */
+
+/* Copyright (c) 2006. Adobe Systems Incorporated. All rights reserved. */
+
+
+/* These are the classes applied on the error messages
+ * which prevent them from being displayed by default.
+ */ 
+
+/* data-spry="text" */
+.textfieldRequiredMsg, 
+.textfieldInvalidFormatMsg, 
+.textfieldMinValueMsg,
+.textfieldMaxValueMsg,
+.textfieldMinCharsMsg,
+.textfieldMaxCharsMsg,
+.textfieldMinAlphaCharsMsg,
+.textfieldMaxAlphaCharsMsg,
+.textfieldStartAlphaCharsMsg,
+
+.textfieldValidMsg,
+
+/* data-spry="select" */
+.selectRequiredMsg, .selectInvalidMsg,
+
+/* data-spry="textarea" */
+.textareaRequiredMsg,
+.textareaMinCharsMsg,
+.textareaMaxCharsMsg,
+.textareaValidMsg,
+
+/* data-spry="checkbox" */
+.checkboxRequiredMsg, .checkboxMinSelectionsMsg, .checkboxMaxSelectionsMsg,
+
+/* data-spry="radio" */
+.radioRequiredMsg, .radioInvalidMsg,
+
+/* data-spry="password" */
+.passwordRequiredMsg, 
+.passwordInvalidStrengthMsg, 
+.passwordMinCharsMsg,
+.passwordMaxCharsMsg,
+.passwordCustomMsg,
+.passwordValidMsg,
+
+/* data-spry="confirm" */
+.confirmRequiredMsg, 
+.confirmInvalidMsg, 
+.confirmValidMsg 
+{
+	display: none;
+}
+
+/* These selectors change the way messages look when the widget is in one of the error states.
+ * These classes set a default red border and color for the error text.
+ * The state class (e.g. .textfieldRequiredState) is applied on the top-level container for the widget,
+ * and this way only the specific error message can be shown by setting the display property to "block".
+ */
+
+/* data-spry="text" */
+.textfieldRequiredState .textfieldRequiredMsg, 
+.textfieldInvalidFormatState .textfieldInvalidFormatMsg, 
+.textfieldMinValueState .textfieldMinValueMsg,
+.textfieldMaxValueState .textfieldMaxValueMsg,
+.textfieldMinCharsState .textfieldMinCharsMsg,
+.textfieldMaxCharsState .textfieldMaxCharsMsg,
+.textfieldMinAlphaCharsState .textfieldMinAlphaCharsMsg,
+.textfieldMaxAlphaCharsState .textfieldMaxAlphaCharsMsg,
+.textfieldStartAlphaCharsState .textfieldStartAlphaCharsMsg,
+
+/* data-spry="select" */
+.selectRequiredState .selectRequiredMsg,
+.selectInvalidState .selectInvalidMsg,
+
+/* data-spry="textarea" */
+.textareaRequiredState .textareaRequiredMsg,
+.textareaMinCharsState .textareaMinCharsMsg,
+.textareaMaxCharsState .textareaMaxCharsMsg,
+
+/* data-spry="checkbox" */
+.checkboxRequiredState .checkboxRequiredMsg,
+.checkboxMinSelectionsState .checkboxMinSelectionsMsg,
+.checkboxMaxSelectionsState .checkboxMaxSelectionsMsg,
+
+/* data-spry="radio" */
+.radioRequiredState .radioRequiredMsg,
+.radioInvalidState .radioInvalidMsg,
+
+/* data-spry="password" */
+.passwordRequiredState .passwordRequiredMsg,
+.passwordMinCharsState .passwordMinCharsMsg,
+.passwordMaxCharsState .passwordMaxCharsMsg,
+.passwordInvalidStrengthState .passwordInvalidStrengthMsg,
+.passwordCustomState .passwordCustomMsg,
+
+/* data-spry="confirm" */
+.confirmRequiredState .confirmRequiredMsg,
+.confirmInvalidState .confirmInvalidMsg
+{
+	display: inline;
+    color: red;
+    font-family: 'Trebuchet MS', sans-serif;
+    padding: 2px;
+    margin: 2px;
+}
+
+
+/* These selectors change the way messages look when the widget is in one of the valid states.
+ * These classes set a default red border and color for the error text.
+ * The state class (e.g. .textfieldValidState) is applied on the top-level container for the widget,
+ * and this way only the specific error message can be shown by setting the display property to "block".
+ */
+
+/* data-spry="none || username || password || confirm || integer || email || date || time || credit_card || zip_code || phone_number || social_security_number || currency || real || ip || url or custom" */
+.textfieldValidState .textfieldValidMsg,
+
+/* data-spry="select" */
+.selectValidState .selectValidMsg,
+
+/* data-spry="textarea" */
+.textareaValidState .textareaValidMsg,
+
+/* data-spry="checkbox" */
+.checkboxValidState .checkboxValidMsg,
+
+/* data-spry="radio" */
+.radioValidState .radioValidMsg,
+
+/* data-spry="password" */
+.passwordValidState .passwordValidMsg,
+
+/* data-spry="confirm" */
+.confirmValidState .confirmValidMsg
+
+{
+    display: block;
+    color: green;
+    font-family: 'Trebuchet MS', sans-serif;
+    padding: 2px;
+    margin: 2px;
+}
+
+
+
+
+/* The next three group selectors control the way the core element (INPUT) looks like when the widget is in one of the states: * focus, required / invalid / minValue / maxValue / minChars / maxChars 
+ * There are two selectors for each state, to cover the two main usecases for the widget:
+ * - the widget id is placed on the top level container for the INPUT
+ * - the widget id is placed on the INPUT element itself (there are no error messages)
+ */
+
+ /* When the widget is in the valid state the INPUT has a green background applied on it. */
+
+/* data-spry="none || username || password || confirm || integer || email || date || time || credit_card || zip_code || phone_number || social_security_number || currency || real || ip || url or custom" */
+.textfieldValidState input, input.textfieldValidState, 
+
+/* data-spry="select" */
+.selectValidState select, select.selectValidState,
+.selectValidState .dropdown.bootstrap-select > button.btn.dropdown-toggle,
+span.selectValidState + button.btn.dropdown-toggle,
+
+/* data-spry="textarea" */
+.textareaValidState textarea, textarea.textareaValidState,
+
+/* data-spry="password" */
+.passwordValidState input, input.passwordValidState,
+
+/* data-spry="confirm" */
+.confirmValidState input, input.confirmValidState
+{
+    /* border-bottom: 2px solid green; */
+    text-decoration: none;
+}
+
+/* When the widget is in an invalid state the INPUT has a red background applied on it. */
+
+/* data-spry="text" */
+input.textfieldRequiredState, .textfieldRequiredState input, 
+input.textfieldStartAlphaCharsState, .textfieldStartAlphaCharsState input, 
+input.textfieldInvalidFormatState, .textfieldInvalidFormatState input, 
+input.textfieldMinValueState, .textfieldMinValueState input, 
+input.textfieldMaxValueState, .textfieldMaxValueState input, 
+input.textfieldMinCharsState, .textfieldMinCharsState input, 
+input.textfieldMaxCharsState, .textfieldMaxCharsState input,
+
+/* data-spry="select" */
+select.selectRequiredState, .selectRequiredState select,
+span.selectRequiredState + button.btn.dropdown-toggle,
+span.selectInvalidState + button.btn.dropdown-toggle,
+select.selectInvalidState, .selectInvalidState select,
+.selectRequiredState .dropdown.bootstrap-select > button.btn.dropdown-toggle,
+.selectInvalidState .dropdown.bootstrap-select > button.btn.dropdown-toggle,
+
+/* data-spry="textarea" */
+textarea.textareaRequiredState, .textareaRequiredState textarea, 
+textarea.textareaMinCharsState, .textareaMinCharsState textarea, 
+textarea.textareaMaxCharsState, .textareaMaxCharsState textarea,
+
+/* data-spry="password" */
+input.passwordRequiredState, .passwordRequiredState input, 
+input.passwordInvalidStrengthState, .passwordInvalidStrengthState input, 
+input.passwordMinCharsState, .passwordMinCharsState input, 
+input.passwordCustomState, .passwordCustomState input, 
+input.passwordMaxCharsState, .passwordMaxCharsState input,
+
+/* data-spry="confirm" */
+input.confirmRequiredState, .confirmRequiredState input, 
+input.confirmInvalidState, .confirmInvalidState input,
+
+input.confirmRequiredState, .confirmRequiredState input, 
+input.confirmInvalidState, .confirmInvalidState input
+{
+    /* border-bottom: 2px solid red; */
+    text-decoration: none;
+}
+
+
+                                /* ??????????????????????? */
+/* When the widget has received focus, the INPUT has a yellow background applied on it. */
+
+/* data-spry="text" */
+.textfieldFocusState input, input.textfieldFocusState,
+
+/* data-spry="select" */
+.selectFocusState select, select.selectFocusState,
+.selectFocusState .dropdown.bootstrap-select > button.btn.dropdown-toggle,
+
+/* data-spry="textarea" */
+.textareaFocusState textarea, textarea.textareaFocusState,
+
+/* data-spry="password" */
+.passwordFocusState input, input.passwordFocusState,
+
+/* data-spry="confirm" */
+.confirmFocusState input, input.confirmFocusState
+{
+	/* background-color: #FFFFCC; */
+    text-decoration: none;
+}
+
+
+/* This class applies only for a short period of time and changes the way the text in the textbox looks like.
+ * It applies only when the widget has character masking enabled and the user tries to type in an invalid character.
+ */
+
+/* data-spry=text */
+.textfieldFlashText input, input.textfieldFlashText,
+
+/* data-spry="textarea" */
+.textareaFlashState textarea, textarea.textareaFlashState
+{
+	color: red !important;
+}
